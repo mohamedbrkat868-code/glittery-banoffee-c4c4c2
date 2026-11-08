@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#a91419">
+<title>SAQR Chicken | اطلب أونلاين</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="saqr2.css">
+</head>
+<body>
+
+<div class="topbar">🔥 أهلاً بيك في SAQR Chicken — القرمشة ليها عنوان</div>
+
+<header>
+  <a class="brand" href="#home">
+    <img src="images/saqr-logo.jpeg" alt="SAQR Logo">
+    <div><b>SAQR</b><small>CHICKEN</small></div>
+  </a>
+
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#menu">المنيو</a>
+    <a href="#about">عن المطعم</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+
+  <button class="cart-button" id="openCart">🛒 السلة <span id="cartCount">0</span></button>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+ 
+  <div class="hero-content">
+    <span class="tag">WELCOME TO SAQR CHICKEN</span>
+    <h1>القرمشة اللي<br><span>تخليك ترجع تاني!</span></h1>
+    <p>اختار وجبتك المفضلة واستمتع بأحلى طعم مع SAQR Chicken</p>
+    <a href="#menu" class="main-btn">اطلب دلوقتي 🍗</a>
+    <div class="location">📍 السنبلاوين أمام تمثال أم كلثوم</div>
+  </div>
+  <div class="hero-badge">CRISPY<br>CHICKEN</div>
+</section>
+
+<section class="features">
+  <div>🍗<b>طعم مميز</b><small>اختيارات لكل الأذواق</small></div>
+  <div>⚡<b>طلب سريع</b><small>اطلب في ثواني</small></div>
+  <div>💬<b>واتساب مباشر</b><small>طلبك يوصلنا بسهولة</small></div>
+</section>
+
+<section class="menu-section" id="menu">
+  <div class="section-title">
+    <img src="images/saqr-logo.jpeg" alt="Logo">
+    <span>OUR MENU</span>
+    <h2>منيو <b>SAQR Chicken</b></h2>
+    <p>اختار اللي نفسك فيه</p>
+  </div>
+
+  <input id="searchInput" class="search" placeholder="🔍 دور على أكلك المفضل...">
+  <div id="categories" class="categories"></div>
+  <div id="menuGrid" class="menu-grid"></div>
+</section>
+
+<section class="banner" id="about">
+  <img src="images/saqr-logo.jpeg" alt="">
+  <div>
+    <span>SAQR CHICKEN</span>
+    <h2>مش مجرد وجبة<br>دي تجربة تستاهلها ❤️</h2>
+    <p>اختار طلبك واستمتع بالقرمشة والطعم اللي بتحبه.</p>
+  </div>
+  <a href="#menu" class="main-btn">اطلب الآن</a>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-title">
+    <span>CONTACT US</span>
+    <h2>مستنيين <b>طلبك</b></h2>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <span>📍</span>
+      <h3>العنوان</h3>
+      <p>السنبلاوين أمام تمثال أم كلثوم</p>
+    </div>
+
+    <a href="tel:01034451251" class="contact-card">
+      <span>📞</span>
+      <h3>اتصل بينا</h3>
+      <p dir="ltr">01034451251</p>
+    </a>
+
+    <a href="https://wa.me/201035100175" class="contact-card">
+      <span>💬</span>
+      <h3>واتساب</h3>
+      <p dir="ltr">01035100175</p>
+    </a>
+  </div>
+
+  <div class="social">
+    <a href="https://www.facebook.com/share/1CB2KVBEd9/?mibextid=wwXIfr" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/saqrchicken?xtok=cDEzZXkwa2kzanlj" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@saqr.chicken?_r=1&_t=ZS-9BEwCzdIebh" target="_blank">TikTok</a>
+  </div>
+</section>
+
+<footer>
+  <img src="images/saqr-logo.jpeg" alt="SAQR">
+  <h2>SAQR CHICKEN</h2>
+  <p>القرمشة ليها عنوان 🍗</p>
+  <small>© 2026 SAQR Chicken All Rights Reserved</small>
+</footer>
+
+<button class="floating-cart" id="floatingCart">🛒 <span id="floatingCount">0</span></button>
+
+<div class="overlay" id="cartOverlay"></div>
+
+<aside class="cart" id="cart">
+  <div class="cart-header">
+    <h2>🛒 سلة طلباتك</h2>
+    <button id="closeCart">✕</button>
+  </div>
+
+  <div id="cartItems" class="cart-items">
+    <p class="empty">السلة لسه فاضية 🍗</p>
+  </div>
+
+  <div class="cart-footer">
+    <h3>الإجمالي: <b id="total">0</b> ج.م</h3>
+    <button id="checkout" class="send-button">تأكيد الطلب ←</button>
+  </div>
+</aside>
+
+<div class="checkout-overlay" id="checkoutOverlay">
+  <div class="checkout">
+    <button id="closeCheckout" class="close">✕</button>
+    <h2>بيانات الطلب 🍗</h2>
+
+    <p>اختار طريقة الاستلام</p>
+
+    <div class="types">
+      <button class="type active" data-type="صالة">🍽️ صالة</button>
+      <button class="type" data-type="تيك أواي">🥡 تيك أواي</button>
+      <button class="type" data-type="توصيل">🛵 توصيل</button>
+    </div>
+
+    <div id="dineFields">
+      <label>رقم الترابيزة</label>
+      <input id="tableNumber" type="number" placeholder="رقم الترابيزة">
+    </div>
+
+    <div id="deliveryFields" class="hidden">
+      <label>العنوان بالتفصيل</label>
+      <textarea id="address" placeholder="اكتب عنوانك بالتفصيل"></textarea>
+      <label>رقم الموبايل</label>
+      <input id="deliveryPhone" type="tel" placeholder="01xxxxxxxxx">
+    </div>
+
+    <div id="takeawayFields" class="hidden">
+      <label>الاسم</label>
+      <input id="pickupName" placeholder="اسم حضرتك">
+      <label>رقم الموبايل</label>
+      <input id="pickupPhone" type="tel" placeholder="01xxxxxxxxx">
+    </div>
+
+    <label>ملاحظات إضافية</label>
+    <textarea id="notes" placeholder="أي طلبات خاصة..."></textarea>
+
+    <h3>الإجمالي: <b id="checkoutTotal">0</b> ج.م</h3>
+    <button id="sendWhatsApp" class="whatsapp">إرسال الطلب على واتساب 💬</button>
+    <small>راجع تفاصيل طلبك واضغط إرسال داخل واتساب.</small>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="saqr3.js"></script>
+</body>
+</html>
